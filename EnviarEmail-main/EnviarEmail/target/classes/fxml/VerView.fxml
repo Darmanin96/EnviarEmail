@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="rootController" hgap="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vgap="3.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="197.40002441406247" minWidth="10.0" prefWidth="186.99999999999997" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="191.0" minWidth="10.0" prefWidth="72.60000000000002" />
+      <ColumnConstraints hgrow="NEVER" maxWidth="105.39996337890625" minWidth="10.0" prefWidth="82.59998779296882" />
+      <ColumnConstraints hgrow="NEVER" maxWidth="105.39996337890625" minWidth="10.0" prefWidth="56.200012207031136" />
+  </columnConstraints><rowConstraints>
+    <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="35.40000839233398" minHeight="-Infinity" prefHeight="34.599990081787105" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="63.99999389648437" minHeight="-Infinity" prefHeight="49.000009918212896" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="70.80001220703124" minHeight="-Infinity" prefHeight="49.600012207031256" vgrow="ALWAYS" />
+      <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="ALWAYS" />
+  </rowConstraints>
+    <Label contentDisplay="CENTER" text="Servidor SMTP:" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+    <Label text="Usar conexión SSL:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+    <Label text="Remitente(From):" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+    <Label text="Destinatorio (To):" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+    <Label text="Asunto (Subject)" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+    <CheckBox fx:id="SSL" onAction="#onActionSSL" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <TextField fx:id="EmailRemitente" maxWidth="1.7976931348623157E308" onAction="#onctionEmailRemitente" prefHeight="26.0" prefWidth="254.0" promptText="Email del remitente" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+    <PasswordField fx:id="Contraseña" onAction="#onActionContraseña" promptText="Contraseña" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+    <TextField fx:id="EmailDestinatario" onAction="#onActionEmailDestinatario" promptText="Email del destinatario" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+    <TextField fx:id="Asunto" onAction="#onActionAsunto" promptText="Asunto del mensaje" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+   <TextField fx:id="Nombre" maxWidth="1.7976931348623157E308" onAction="#onActionnombre" prefHeight="26.0" prefWidth="290.0" promptText="Nombre o IP del servidor" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+   <TextArea fx:id="Mensaje" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onDragDetected="#onActionMensaje" prefHeight="141.0" prefWidth="537.0" promptText="Mensaje" GridPane.columnSpan="5" GridPane.rowIndex="6" />
+   <TextField fx:id="Puerto" alignment="CENTER" maxWidth="-Infinity" onAction="#onActionPuerto" prefHeight="26.0" prefWidth="85.0" promptText="Puerto" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+   <Button fx:id="Enviar" defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionEnviar" prefHeight="15.0" prefWidth="50.0" text="Enviar" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+   <Button fx:id="Vaciar" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionVaciar" prefHeight="20.0" prefWidth="50.0" text="Vaciar" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+   <Button fx:id="Cerrar" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionCerrar" prefHeight="15.0" prefWidth="50.0" text="Cerrar" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+
+
+</GridPane>
